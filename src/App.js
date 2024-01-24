@@ -56,6 +56,7 @@ function App() {
     // console.log("getDetailUser", res);
     dispatch(updateUser({ ...res?.data, access_token: token }));
   };
+
   return (
     <div className="App">
       <Router>
