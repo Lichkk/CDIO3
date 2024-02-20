@@ -12,8 +12,8 @@ function Items({ currentItems }) {
           <div key={item._id} className="w-full">
             <Product
               _id={item._id}
-              img={item.image}
-              productName={item.name}
+              image={item.image}
+              name={item.name}
               price={item.price}
               color={item.color}
               badge={item.badge}
@@ -74,8 +74,8 @@ const Pagination = ({ itemsPerPage }) => {
         />
 
         <p className="text-base font-normal text-lightText">
-          {/* Products from {itemStart === 0 ? 1 : itemStart} to {endOffset} of{" "}
-          {items.length} */}
+          Products from {itemStart === 0 ? 1 : itemStart} to {endOffset} of{" "}
+          {products.length}
         </p>
       </div>
     </div>

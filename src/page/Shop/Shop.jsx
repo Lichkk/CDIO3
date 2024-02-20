@@ -6,7 +6,7 @@ import ShopSideNav from "../../components/ShopPage/ShopSideNav";
 import Pagination from "../../components/ShopPage/Pagination";
 
 const Shop = () => {
-  const [itemsPerPage, setItemsPerPage] = useState(12);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
   const itemsPerPageFromBanner = (itemsPerPage) => {
     setItemsPerPage(itemsPerPage);
   };

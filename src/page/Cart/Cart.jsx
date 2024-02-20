@@ -11,9 +11,9 @@ import HeaderBottom from "../../components/Header/HeaderBottom";
 
 const Cart = () => {
   const dispatch = useDispatch();
+
   const products = useSelector((state) => state.product.products);
 
-  console.log(products);
   const [totalAmt, setTotalAmt] = useState("");
   const [shippingCharge, setShippingCharge] = useState("");
   useEffect(() => {
@@ -42,10 +42,10 @@ const Cart = () => {
         {products.length > 0 ? (
           <div className="pb-20">
             <div className="w-full h-20 bg-[#F5F7F7] text-primeColor hidden lgl:grid grid-cols-5 place-content-center px-6 text-lg font-titleFont font-semibold">
-              <h2 className="col-span-2">Product</h2>
-              <h2>Price</h2>
-              <h2>Quantity</h2>
-              <h2>Sub Total</h2>
+              <h2 className="col-span-2">Sản Phẩm</h2>
+              <h2>Giá</h2>
+              <h2>Số lượng</h2>
+              <h2>Tạm tính</h2>
             </div>
             <div className="mt-5">
               {products.map((item) => (
@@ -82,28 +82,28 @@ const Cart = () => {
                 </h1>
                 <div>
                   <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 text-lg px-4 font-medium">
-                    Subtotal
+                    Tổng tiền hàng
                     <span className="font-semibold tracking-wide font-titleFont">
-                      ${totalAmt}
+                      {totalAmt} VNĐ
                     </span>
                   </p>
                   <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 text-lg px-4 font-medium">
-                    Shipping Charge
+                    Tiền Ship
                     <span className="font-semibold tracking-wide font-titleFont">
-                      ${shippingCharge}
+                      {shippingCharge} VNĐ
                     </span>
                   </p>
                   <p className="flex items-center justify-between border-[1px] border-gray-400 py-1.5 text-lg px-4 font-medium">
-                    Total
+                    Tổng tiền
                     <span className="font-bold tracking-wide text-lg font-titleFont">
-                      ${totalAmt + shippingCharge}
+                      {totalAmt + shippingCharge} VNĐ
                     </span>
                   </p>
                 </div>
                 <div className="flex justify-end">
                   <Link to="/paymentgateway">
                     <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
-                      Proceed to Checkout
+                      Tiến hành thanh toán
                     </button>
                   </Link>
                 </div>
