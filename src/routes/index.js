@@ -3,6 +3,7 @@ import Home from "../page/Home/Home";
 import Login from "../page/Login/Login";
 import ProductDetails from "../page/ProductDetails/ProductDetails";
 import Profile from "../page/Profile/Profile";
+import Register from "../page/Register/Register";
 import Shop from "../page/Shop/Shop";
 
 export const routes = [
@@ -15,6 +16,11 @@ export const routes = [
     path: "/",
     page: Home,
     isShowHeader: true,
+  },
+  {
+    path: "/signup",
+    page: Register,
+    // isShowHeader: true,
   },
   {
     path: "/shop",

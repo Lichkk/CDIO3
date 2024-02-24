@@ -74,7 +74,7 @@ const Login = () => {
     setErr(validate(e.target.value));
   };
 
-  const handleSignUp = (e) => {
+  const handleSignIn = (e) => {
     e.preventDefault();
 
     if (!email_pattern.test(email)) {
@@ -225,7 +225,7 @@ const Login = () => {
                 </div>
 
                 <button
-                  onClick={handleSignUp}
+                  onClick={handleSignIn}
                   className="bg-primeColor hover:bg-black text-gray-200 hover:text-white cursor-pointer w-full text-base font-medium h-10 rounded-md  duration-300"
                 >
                   {isPending ? (

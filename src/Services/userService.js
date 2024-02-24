@@ -7,6 +7,11 @@ export const userLogin = async (data) => {
   return res.data;
 };
 
+export const userRegister = async (data) => {
+  const res = await axios.post("http://localhost:3000/api/user/sign-up", data);
+  return res.data;
+};
+
 export const getDetailUser = async (id, access_token) => {
   const res = await axiosJWT.get(
     `http://localhost:3000/api/user/get-details/${id}`,
